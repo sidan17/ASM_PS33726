@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="css/c1.css">
+</head>
+<body>
+    <header id="header"> </header>
+    <nav id="menu"> 
+        <a href="#top">Trang chủ</a>
+        <a href="#listbaitap"> Bài tập</a>
+        <a href="#listpt"> Huấn luyện viên</a>
+        <a href="#listphonggym"> Phòng gym</a>
+    </nav>
+    <main> 
+        <section id="listbaitap">
+            <h2>Danh sách bài tập</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listpt">
+            <h2> Danh sách huấn luyện viên</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listphonggym">
+            <h2> Danh sách phòng gym</h2>
+            <div id="data"></div>
+        </section>
+        <section id="listthuonghieu">
+            <h2> Các thương hiệu thiết bị gym</h2>
+            <div id="data"></div>
+        </section>
+    </main>
+    <footer> Họ tên sinh viên: Huỳnh Sĩ Đan @2024</footer>
+</body>
+</html>
+<script type="module">
+   import { showlistworkouts, showlistgymmembers, showlistgymbranches, showlistbrands  } from './js/app.js';
+   document.querySelector("#listbaitap #data").innerHTML = showlistworkouts();
+   document.querySelector("#listpt #data").innerHTML = showlistgymmembers();
+   document.querySelector("#listphonggym #data").innerHTML = showlistgymbranches();
+   document.querySelector("#listthuonghieu #data").innerHTML = await showlistbrands();
+</script>
